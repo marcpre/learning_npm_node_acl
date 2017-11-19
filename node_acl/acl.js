@@ -29,7 +29,7 @@ function tmpl(str, ctx) {
 
 function createTables(callback) {
 	var prefix = ''
-	var bucketNames = buckets(args[8])
+	var bucketNames = buckets()
 	
 	if (!prefix) prefix = 'acl_';
 	
@@ -51,3 +51,4 @@ function createTables(callback) {
 }
 
 createTables()
+console.log("Inserted Table")
