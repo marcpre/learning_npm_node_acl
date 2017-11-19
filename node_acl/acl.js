@@ -27,21 +27,13 @@ function tmpl(str, ctx) {
 	return sql.replace(/\?/g, function() { return '$' + n++; });
 }
 
-function getDB() {
-	return db = knex
-}
-
-function createTables(args, callback) {
+function createTables(callback) {
 	var prefix = ''
-	var db = args[7]
 	var bucketNames = buckets(args[8])
 	
-	if (!db) {
-		db = getDB();
-	}
 	if (!prefix) prefix = 'acl_';
 	
-	db.raw(tmpl(downSql+upSql, {
+	knex.raw(tmpl(downSql+upSql, {
             'meta': bucketNames.meta,
             'parents': bucketNames.parents,
             'permissions': bucketNames.permissions,

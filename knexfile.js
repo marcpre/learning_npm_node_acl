@@ -1,4 +1,3 @@
-//load env variables
 require("dotenv").config()
 
 // Update with your config settings.
@@ -12,5 +11,4 @@ module.exports = {
             database: process.env.DB_DATABASE,
         },
     },
-
 }
