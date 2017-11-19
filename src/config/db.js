@@ -1,4 +1,3 @@
-// Loading from an external file
 const config = require('../../knexfile')
 
 const env = process.env.DB_ENV

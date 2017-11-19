@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
 const passport = require('passport')
+const acl = require('./config/nodeacl')
 
 const auth = require('./routes/auth')
 const index = require('./routes/index')
@@ -30,6 +31,8 @@ app.use(session({
 }))
 app.use(passport.initialize())
 app.use(passport.session())
+//setup acl
+acl.setup()
 
 // routes
 app.use('/', auth)
