@@ -4,7 +4,7 @@ const router = express.Router()
 const passportConfig = require('../config/passport')
 
 router.get('/', passportConfig.isAuthenticated, (req, res) => {
-  res.render('dashboard')
+  res.render('index')
 })
 
 module.exports = router

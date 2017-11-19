@@ -2,7 +2,7 @@
 
 {{#> layouts/base title="Login" }}
 
-<form class="form-horizontal">
+<form class="form-horizontal" method='post' action='/login'>
 <fieldset>
 
 <!-- Form Name -->
@@ -30,7 +30,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit">Submit</label>
   <div class="col-md-4">
-    <button id="submit" name="submit" class="btn btn-primary">Button</button>
+    <button id="submit" name="submit" class="btn btn-primary" type='submit'>Button</button>
   </div>
 </div>
 
